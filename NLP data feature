@@ -1,0 +1,78 @@
+Feature engineering:
+ It is the process of using domain knowledge of the data to create features that make machine learning algorithms work
+ 
+ I will be listing out a total of 15 features that we can use
+1. Number of Characters
+def count_chars(text):
+    return len(text)
+
+2. Number of words
+
+def count_words(text):
+    return len(text.split())
+	
+3. Number of capital characters
+
+def count_capital_chars(text):
+    count=0
+    for i in text:
+        if i.isupper():
+            count+=1
+    return count
+	
+4. Number of capital words
+
+def count_capital_words(text):
+    return sum(map(str.isupper,text.split()))
+	
+5. Count the number of punctuations
+
+def count_punctuations(text):
+    punctuations='!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~'
+    d=dict()
+    for i in punctuations:
+        d[str(i)+' count']=text.count(i)
+    return d 
+	
+6. Number of words in quotes
+
+def count_words_in_quotes(text):
+    x = re.findall("'.'|"."", text)
+    count=0
+    if x is None:
+        return 0
+    else:
+        for i in x:
+            t=i[1:-1]
+            count+=count_words(t)
+        return count
+
+7. Number of sentences
+
+def count_sent(text):
+    return len(nltk.sent_tokenize(text))
+	
+8. Count the number of unique words
+def count_unique_words(text):
+    return len(set(text.split()))
+	
+10. Count of mentions
+
+def count_mentions(text):
+    x = re.findall(r'(@w[A-Za-z0-9]*)
+	', text)
+    return len(x)
+	
+11. Count of stopwords
+
+def count_stopwords(text):
+    stop_words = set(stopwords.words('english'))  
+    word_tokens = word_tokenize(text)
+    stopwords_x = [w for w in word_tokens if w in stop_words]
+    return len(stopwords_x)
+
+12. Calculating average word length
+df['avg_wordlength'] = df['char_count']/df['word_count']
+
+13. Calculating average sentence length
+df['avg_sentlength'] = df['word_count']/df['sent_count']
