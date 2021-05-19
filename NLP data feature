@@ -76,3 +76,15 @@ df['avg_wordlength'] = df['char_count']/df['word_count']
 
 13. Calculating average sentence length
 df['avg_sentlength'] = df['word_count']/df['sent_count']
+
+Concept Learning:
+In concept learning, we aim to use data to teach a machine to solve a binary classification problem. 
+That is, to classify a data-point as either belonging to or not belonging to a particular concept or idea.
+Features are just columns/attributes derived from our data, and so choosing features for concept learning is, in essence,
+ choosing a data-viewpoint for the learning problem.
+ Think aboutTrying to tell whether or not an animal is a dog by only looking at its height
+ On the otheon the other hand, if we choose to include too many features in our learning model, the noise
+ and increased complexity could make the learning process significantly harder.
+ 
+ The initial set of raw features can be redundant and too large to be managed. Therefore, a preliminary step in many applications of machine learning and pattern recognition consists of selecting a subset of features, or constructing a new and reduced set of features to facilitate learning,
+ and to improve generalization and interpretability[
