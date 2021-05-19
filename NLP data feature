@@ -86,5 +86,6 @@ Features are just columns/attributes derived from our data, and so choosing feat
  On the otheon the other hand, if we choose to include too many features in our learning model, the noise
  and increased complexity could make the learning process significantly harder.
  
- The initial set of raw features can be redundant and too large to be managed. Therefore, a preliminary step in many applications of machine learning and pattern recognition consists of selecting a subset of features, or constructing a new and reduced set of features to facilitate learning,
- and to improve generalization and interpretability[
+ The initial set of raw features can be redundant and too large to be managed. Therefore, a preliminary step in many applications of machine learning 
+ and pattern recognition consists of selecting a subset of features, or constructing a new and reduced set of features to facilitate learning,
+ and to improve generalization and interpretability
