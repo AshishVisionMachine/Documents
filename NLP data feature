@@ -83,9 +83,26 @@ That is, to classify a data-point as either belonging to or not belonging to a p
 Features are just columns/attributes derived from our data, and so choosing features for concept learning is, in essence,
  choosing a data-viewpoint for the learning problem.
  Think aboutTrying to tell whether or not an animal is a dog by only looking at its height
- On the otheon the other hand, if we choose to include too many features in our learning model, the noise
+ On the pytheon the other hand, if we choose to include too many features in our learning model, the noise
  and increased complexity could make the learning process significantly harder.
  
  The initial set of raw features can be redundant and too large to be managed. Therefore, a preliminary step in many applications of machine learning 
  and pattern recognition consists of selecting a subset of features, or constructing a new and reduced set of features to facilitate learning,
  and to improve generalization and interpretability
+ 
+ Feature Extraction:
+ Feature extraction is a process of dimensionality reduction by which an initial set of raw data is reduced to more manageable groups for processing.
+ A characteristic of these large data sets is a large number of variables that require  a lot of computing resources to process.
+ Feature extraction is the name for methods that select and /or combine variables into features, effectively reducing the amount of 
+ data that must be processed, while still accurately and completely 
+ describing the original data set.
+ 
+ Practical Uses of Feature Extraction:
+ Autoencoders:
+ 
+ Bag-of-Words
+– A technique for natural language processing that extracts the words (features) used in a sentence, document, website, etc
+I
+mage Processing – Algorithms are used to detect features such as shaped, edges, or motion in a digital image or video.
+
+ 
