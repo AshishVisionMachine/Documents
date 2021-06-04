@@ -105,4 +105,74 @@ Features are just columns/attributes derived from our data, and so choosing feat
 I
 mage Processing – Algorithms are used to detect features such as shaped, edges, or motion in a digital image or video.
 
+ Using Regularization could certainly help reduce the risk of overfitting, but using instead Feature Extraction techniques can also lead to other types of advantages such as:
+Accuracy improvements.
+Overfitting risk reduction.
+Speed up in training.
+Improved Data Visualization.
+Increase in explainability of our model.
+
+These new reduced set of features should then be able to summarize most of the information contained in the original set of features. In this way, a summarised version of the 
+original features can be created from a combination of the original set.
+Another commonly used technique to reduce the number of feature in a dataset is Feature Selection
+
+The difference between Feature Selection and Feature Extraction is that feature selection aims instead to rank the importance of the existing features in the dataset
+ and discard less important ones (no new features are created).
  
+ PCA is one of the most used linear dimensionality reduction technique.
+ 
+  The difference between Feature Selection and Feature Extraction is that feature selection aims instead to rank the importance 
+  of the existing features in the dataset and discard less important ones (no new features are created)
+  
+  The goal of feature selection in machine learning is to find the best set of features that allows one to build useful models of studied phenomena.
+  A. Filter methods
+
+B. Wrapper methods
+
+C. Embedded methods
+
+D. Hybrid methods
+
+  A. Filter methods
+
+Filter methods are generally used as a preprocessing step. The selection of features is independent of any machine learning algorithms. 
+Instead, features are selected on the basis of their scores in various statistical tests for their correlation with the outcome variable. 
+The correlation is a subjective term here. For basic guidance, you can refer to the following table for defining correlation co-efficients.
+
+	Pearson’s Correlation: It is used as a measure for quantifying linear dependence between two continuous variables X and Y. 
+	Its value varies from -1 to +1. Pearson’s correlation is given as:fs2
+
+	LDA: Linear discriminant analysis is used to find a linear combination of features that characterizes or separates two or more classes (or levels) of a categorical variable.
+	ANOVA: ANOVA stands for Analysis of variance. It is similar to LDA except for the fact that it is operated using one or more categorical independent features and one continuous dependent feature. It provides a statistical test of whether the means of several groups are equal or not.
+	Chi-Square: It is a is a statistical test applied to the groups of categorical features to evaluate the likelihood of correlation or association between them using their frequency distribution.
+
+In statistics, multicollinearity (also collinearity) is a phenomenon in which one predictor variable in 
+a multiple regression model can be linearly predicted from the others with a substantial degree of accuracy.
+
+Multicollinearity occurs when two or more independent variables are highly correlated with one another in a regression model.
+For example, height and weight, household income and water consumption, mileage and price of a car, study time and leisure time, etc.
+
+Let me take a simple example from our everyday life to explain this. Colin loves watching television while munching on chips. 
+The more television he watches, the more chips he eats and the happier he gets!
+
+Now, if we could quantify happiness and measure Colin’s happiness while he’s busy doing his favorite activity, 
+which do you think would have a greater impact on his happiness? Having chips or watching television? 
+That’s difficult to determine because the moment we try to measure Colin’s happiness from eating chips,
+ he starts watching television. And the moment we try to measure his happiness from watching television, 
+ he starts eating chips.
+ 
+ Multicollinearity can be a problem in a regression model because we would not be able to distinguish between the individual 
+ effects of the independent variables on the dependent variable. 
+ For example, let’s assume that in the following linear equation:
+
+Y = W0+W1*X1+W2*X2
+
+Coefficient W1 is the increase in Y for a unit increase in X1 while keeping X2 constant. 
+But since X1 and X2 are highly correlated, changes in X1 would also cause changes in X2 and we would not be able to see their individual effect on Y.
+
+Eating chips and watching television are highly correlated in the case of Colin and we cannot individually 
+determine the impact of the individual activities on his happiness. This is the multicollinearity problem!
+
+This makes the effects of X1 on Y difficult to distinguish from the effects of X2 on Y. ”
+
+So why should you worry about multicollinearity in the machine learning context? Let’s answer that question next.
