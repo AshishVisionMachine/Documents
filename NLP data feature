@@ -175,4 +175,68 @@ determine the impact of the individual activities on his happiness. This is the 
 
 This makes the effects of X1 on Y difficult to distinguish from the effects of X2 on Y. ”
 
+
 So why should you worry about multicollinearity in the machine learning context? Let’s answer that question next.
+
+Multicollinearity may not affect the accuracy of the model as much. 
+But we might lose reliability in determining the effects of individual features in your model – and that can be a problem when it comes to interpretability.
+
+Inaccurate use of dummy variables can also cause a multicollinearity problem. This is called the Dummy variable trap: 
+
+
+Wrapper Methods: Definition
+Wrapper methods work by evaluating a subset of features using a machine learning algorithm that employs a search strategy 
+to look through the space of possible feature subsets, evaluating each subset based on the quality of the performance of a given algorithm.
+These methods are called greedy algorithms because they aim to find the best possible combination of features that 
+result in the best performant model— which will be computationally expensive, and often impractical in the case of exhaustive search.
+Practically any combination of a search strategy and a machine learning algorithm can be used as a wrapper.
+
+Wrapper Methods: Advantages
+Given the issues we encountered using filter methods, wrapper methods present two main advantages that deal with those issues:
+They detect the interaction between variables
+They find the optimal feature subset for the desired machine learning algorithm
+The wrapper methods usually result in better predictive accuracy than filter methods.
+
+Wrapper Methods: Process
+Wrapper methods work in the following way, generally speaking:
+Search for a subset of features: Using a search method (described next), we select a subset of features from the available ones.
+Build a machine learning model: In this step, a chosen ML algorithm is trained on the previously-selected subset of features.
+Evaluate model performance: And finally, we evaluate the newly-trained ML model with a chosen metric.
+Repeat: The whole process starts again with a new subset of features, a new ML model trained, and so on.
+We stop until the desired condition is met, and then we choose the best subset with the best result in the evaluation phase.
+
+
+At some point in time, we need to stop searching for a subset of features. To do this, we have to put in place some
+ pre-set criteria (often somewhat arbitrary), around when this searching should stop. These criteria need to be defined by the machine learning engineer. Here are a couple of examples of these criteria:
+Model performance decreases.
+Model performance increases.
+A predefined number of features is reached.
+The pre-set criteria, for example, can be metrics like ROC-AUC for classification or RMSE for regression.
+
+
+Search methods
+Forward Feature Selection: This method starts with no feature and adds one at a time.
+Backward Feature Elimination: This method starts with all features present and removes one feature at the time.
+Exhaustive Feature Selection: This method tries all possible feature combinations.
+Bidirectional Search: And this last one does both forward and backward feature selection simultaneously in order to get one unique solution.
+
+
+Embedded Methods: Definition
+Embedded methods complete the feature selection process within the construction of the machine learning algorithm itself. 
+In other words, they perform feature selection during the model training, which is why we call them embedded methods.
+A learning algorithm takes advantage of its own variable selection process and performs feature selection and classification/regression at the same time.
+
+
+Embedded Methods: Advantages
+The embedded method solves both issues we encountered with the filter and wrapper methods by combining their advantages. Here’s how:
+They take into consideration the interaction of features like wrapper methods do.
+They are faster like filter methods.
+They are more accurate than filter methods.
+They find the feature subset for the algorithm being trained.
+They are much less prone to overfitting.
+
+Embedded Methods: Process
+Any and all embedded methods work as follows:
+First, these methods train a machine learning model.
+They then derive feature importance from this model, which is a measure of how much is feature important when making a prediction.
+Finally, they remove non-important features using the derived feature importance.
