@@ -240,3 +240,17 @@ Any and all embedded methods work as follows:
 First, these methods train a machine learning model.
 They then derive feature importance from this model, which is a measure of how much is feature important when making a prediction.
 Finally, they remove non-important features using the derived feature importance.
+
+Hybrid methods:
+
+Hybrid Methods: Definition
+The definition here is quite simple—rather than using a single approach to select feature subsets as the previous methods do,
+ hybrid methods combine the different approaches to get the best possible feature subset.
+The way to combine these approaches is up to the engineer, given that you have a lot of methods in your toolbox. 
+You can, for example, start by performing filter methods by eliminating constant, quasi-constant and duplicated features. 
+Then, in the second step, you could use wrapper methods to select the best feature subset from the previous step.
+ This is just one simple, high-level approach.
+ 
+ mutual information and Chi score:
+ 
+ 
