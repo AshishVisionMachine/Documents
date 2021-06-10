@@ -251,6 +251,31 @@ You can, for example, start by performing filter methods by eliminating constant
 Then, in the second step, you could use wrapper methods to select the best feature subset from the previous step.
  This is just one simple, high-level approach.
  
+ What Is Information Gain?
+Information Gain, or IG for short, measures the reduction in entropy or surprise by splitting a dataset according to a given value of a random variable.
+
+A larger information gain suggests a lower entropy group or groups of samples, and hence less surprise.
+
+You might recall that information quantifies how surprising an event is in bits.
+ Lower probability events have more information, higher probability events have less information. 
+Entropy quantifies how much information there is in a random variable, or 
+more specifically its probability distribution. A skewed distribution has a low entropy,
+ whereas a distribution where events have equal probability has a larger entropy.
+
+In information theory, we like to describe the “surprise” of an event.
+ Low probability events are more surprising therefore have a larger amount of information. 
+ Whereas probability distributions where the events are equally likely are more surprising and have larger entropy.
+ 
+ The information gain is calculated for each variable in the dataset. The variable that has the largest information gain is selected to split the dataset. 
+ 
+ Generally, a larger gain indicates a smaller entropy or less surprise.
+ 
+ Note that minimizing the entropy is equivalent to maximizing the information gain
+ he process of selecting a new attribute and partitioning the training examples is now repeated 
+ for each non terminal descendant node, this time using only the training examples associated with that node. 
+ Attributes that have been incorporated higher in the tree are  
+ excluded, so that any given attribute can appear at most once along any path through the tree.
+ 
  mutual information and Chi score:
  
  
