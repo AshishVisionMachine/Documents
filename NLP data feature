@@ -297,5 +297,44 @@ Importantly, ANOVA is used when one variable is numeric and one is categorical, 
 The results of this test can be used for feature selection where those features that are independent 
 of the target variable can be removed from the dataset.
 
+hi-square measures the statistical significance of the differences between the child nodes and their parent nodes.
+ It is measured as the sum of squared standardized differences between observed and expected frequencies 
+of target variable for each node and is calculated using this formula-
+
+Chi-square measures the statistical significance of the differences between the child nodes and their parent nodes.
+ It is measured as the sum of squared standardized differences between observed and expected frequencies of 
+target variable for each node and is calculated using this formula-
+
+We’ve seen this before. There is a total of 20 students and out of those 10 play cricket and 10 do not. 
+
+
+So, of course, the percent of students who do play cricket will be 50%. Now if we consider the “Above average”
+ node here, there are 14 students in it, as the percentage of students who play cricket is 50% in the parent
+ node as we discussed, the expected number of students who play cricket will of course be 7 and if you look 
+ at the actual value it is 8. So now we have both the values expected values and actual values.
+The expected was 7 and the actual turns out to be 8, so we can infer that the expected value is calculated 
+based on the distribution of the parent node of the same class. Similarly, the expected number of students 
+who do not play cricket will be 7. I want you to intuitively think about this because remember the percentage
+ of students who do not play cricket in the parent node is 50% as well and then here the actual value turns out to be 6.
+Similarly for the below-average node expected to play and not play will be 3. Whereas the actual values are- 2 
+students play cricket and 4 do not.
+
+Now we can calculate the chi-square using the formula mentioned above for each child node.
+ Can you guess what will be the chi-square value if the actual and expected values are the same? 
+ It’s actually pretty simple, it will be zero because both the actual and expected are the same and the difference will be zero.
+Now if both values are the same we can generate an inference that the distribution of the child 
+
+node is the same as there is the parent node and hence we are not improving the purity of the nodes.
+ On the other hand, if the chi-square value is high it means that the distribution of child nodes is
+ changing with respect to the parent node and we are going in a direction to
+achieve more pure nodes hence we can say that:
+Higher the chi-square value more will be the purity of the nodes after a split.
+
+Properties of chi-square
+Let’s look at some of the properties of chi-square before understanding how it actually works-
+Chi-square just like Gini impurity works only with categorical variables so we cannot use it for continuous targets.
+The higher the value of chi-square more the sub-nodes are different from the parent node and hence the homogeneity is more.
+These are some of the properties of chi-square and you must consider these properties before choosing the right algorithm for deciding the split.
+
  
  
