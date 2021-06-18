@@ -297,7 +297,7 @@ Importantly, ANOVA is used when one variable is numeric and one is categorical, 
 The results of this test can be used for feature selection where those features that are independent 
 of the target variable can be removed from the dataset.
 
-hi-square measures the statistical significance of the differences between the child nodes and their parent nodes.
+chi-square measures the statistical significance of the differences between the child nodes and their parent nodes.
  It is measured as the sum of squared standardized differences between observed and expected frequencies 
 of target variable for each node and is calculated using this formula-
 
@@ -337,4 +337,50 @@ The higher the value of chi-square more the sub-nodes are different from the par
 These are some of the properties of chi-square and you must consider these properties before choosing the right algorithm for deciding the split.
 
  
+Properties of the Chi-Square
+Chi-square is non-negative. Is the ratio of two non-negative values, therefore must be non-negative itself.
+Chi-square is non-symmetric.
+There are many different chi-square distributions, one for each degree of freedom.
+The degrees of freedom when working with a single population variance is n-1.
+
+Chi-Square Probabilities
+Since the chi-square distribution isn't symmetric, the method for looking up left-tail values
+ is different from the method for looking up right tail values.
+
+Area to the right - just use the area given.
+Area to the left - the table requires the area to the right, so subtract the given area from one and look this area up in the table.
+Area in both tails - divide the area by two. Look up this area for the right critical value and one minus this area for the left critical value. 
+
+Properties of Chi-Square Distribution
  
+
+The chi-square distribution is a continuous probability distribution with the values ranging from 0 to ∞ (infinity) in the positive 
+direction. The χ2 can never assume negative values.
+The shape of the chi-square distribution depends on the number of degrees of freedom ‘ν’. 
+When ‘ν’ is small, the shape of the curve tends to be skewed to the right, and as the ‘ν’ gets larger, the shape becomes more 
+symmetrical and can be approximated by the normal distribution.
+The mean of the chi-square distribution is equal to the degrees of freedom, i.e. E(χ2) = ‘ν’. 
+While the variance is twice the degrees of freedom, Viz. n(χ2) = 2ν.
+The χ2 distribution approaches the normal distribution as ν gets larger with mean ν and standard 
+deviation as √2χ2. It has been determined that quantity √2χ2 gives a better approximation to normality than
+
+ the χ2  itself if the values are about 30 or more. Thus, the mean and standard deviation of the distribution 
+ of √2χ2  is equal to √2ν-1 and one respectively.
+The sum of independent χ2 is itself a χ2  variate. Suppose, χ12 is a χ2  variate with degrees of freedom ν1 
+and χ22 is another χ2 variate with degrees of freedom ν2, then their sum χ12 + χ22 will be equal to χ2 variate with 
+ν1+ ν2 degrees of freedom. This property is called as the additive property of Chi-square.
+Thus, χ2 distribution depends on the degrees of distribution as its shape changes with the change in the ‘ν’
+, and as ‘ν’ becomes greater, χ2  gets approximated by the normal distribution.
+
+Degree of Freedom:
+ The Degrees of Freedom refers to the number of values involved in the calculations that have the freedom to vary.
+ In other words, the degrees of freedom, in general, can be defined as the total number 
+ of observations minus the number of independent constraints imposed on the observations.
+ 
+ Let’s consider a scenario where we need to determine the relationship between the independent category feature (predictor)
+ and dependent category feature(response). In feature selection, 
+ we aim to select the features which are highly dependent on the response.
+ 
+ When two features are independent, the observed count is close to the expected count, thus we will have 
+ smaller Chi-Square value. So high Chi-Square value indicates that the hypothesis of independence is incorrect. In simple words, higher the Chi-Square value 
+ the feature is more dependent on the response and it can be selected for model training.
